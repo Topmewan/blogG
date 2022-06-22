@@ -1,0 +1,61 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid lightgray;
+	.top {
+		background-color: rgb(0, 153, 255);
+		height: 300px;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		padding: 15px 20px;
+
+		.header {
+			display: flex;
+			justify-content: flex-start;
+			gap: 15px;
+			margin-bottom: 10px;
+
+			.avatar {
+				width: 40px;
+				height: 40px;
+				background-color: black;
+				border-radius: 100%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+		.info {
+			padding: 0 55px;
+
+			.title {
+				margin-bottom: 10px;
+			}
+
+			.tags {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				> {
+					span {
+						color: rgb(147, 147, 147);
+						cursor: pointer;
+						transition: all 0.2s ease;
+
+						&:hover {
+							color: #000;
+						}
+
+						&::before {
+							content: '#';
+						}
+					}
+				}
+			}
+		}
+	}
+}
